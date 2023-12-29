@@ -2,14 +2,14 @@ import 'dart:developer';
 import 'package:easy_pdf_viewer/easy_pdf_viewer.dart';
 import 'package:flutter/material.dart';
 
-class PDFScreen extends StatefulWidget {
-  const PDFScreen({Key? key}) : super(key: key);
+class EasyPdfViewerExample extends StatefulWidget {
+  const EasyPdfViewerExample({Key? key}) : super(key: key);
 
   @override
-  _PDFScreenState createState() => _PDFScreenState();
+  EasyPdfViewerExampleState createState() => EasyPdfViewerExampleState();
 }
 
-class _PDFScreenState extends State<PDFScreen> {
+class EasyPdfViewerExampleState extends State<EasyPdfViewerExample> {
   late Future<PDFDocument> pdfFuture;
 
   @override
@@ -20,11 +20,11 @@ class _PDFScreenState extends State<PDFScreen> {
 
   Future<PDFDocument> loadPDFDocument() async {
     try {
-      return PDFDocument.fromAsset('images/Mingourol.pdf');
+      return PDFDocument.fromAsset('images/big-o-cheatsheet.pdf');
     } catch (e) {
       log('Error loading PDF: $e');
       // Handle the error, e.g., show a message to the user
-      throw e; // Rethrow the error to mark the Future as completed with an error
+      rethrow; // Rethrow the error to mark the Future as completed with an error
     }
   }
 
@@ -32,15 +32,15 @@ class _PDFScreenState extends State<PDFScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Example'),
+        title: const Text('Example'),
       ),
       body: FutureBuilder<PDFDocument>(
         future: pdfFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           } else if (snapshot.hasError) {
-            return Center(child: Text('Error loading PDF'));
+            return const Center(child: Text('Error loading PDF'));
           } else {
             return Center(child: PDFViewer(document: snapshot.data!));
           }
