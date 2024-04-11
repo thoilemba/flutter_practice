@@ -45,6 +45,9 @@ class _BottomNavAnimationState extends State<BottomNavAnimation> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         // backgroundColor: Colors.purple,
+        // type: BottomNavigationBarType.fixed,
+        selectedFontSize: 14,
+        unselectedFontSize: 14,
         showSelectedLabels: true,
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
@@ -55,7 +58,7 @@ class _BottomNavAnimationState extends State<BottomNavAnimation> {
           BottomNavigationBarItem(
             label: 'Item One',
             icon: Icon(Icons.home),
-            backgroundColor: Color.fromARGB(221, 26, 26, 26),
+            backgroundColor: Colors.pink,
           ),
           BottomNavigationBarItem(
             label: 'Item two',
