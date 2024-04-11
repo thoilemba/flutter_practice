@@ -1,0 +1,2 @@
+chewie with video_player and better_player cannot be used at the same time.
+In order to use one, remove the other from the pubspec.

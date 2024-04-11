@@ -1,6 +1,2 @@
 The folders inside the lib are not related to one another.
-It is used for practical work and testing.
-
-
-chewie with video_player and better_player cannot be used at the same time.
-In order to use one, remove the other from the pubspec.
+It is used for practical work and learning.

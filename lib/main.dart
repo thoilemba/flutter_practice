@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:practice/testing_example/counter.dart';
+import 'package:practice/external_packages_examples/webview_example.dart';
+import 'package:practice/widgets_example/expanded_flexible.dart';
 
 
 // void main() => runApp(DevicePreview(builder: (context) => const MyApp()));
@@ -11,8 +13,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-      home: MyHomePage(title: 'Testing Example',),
+    return GetMaterialApp(
+      home: ExpandedVsFlexible(),
     );
   }
 }

@@ -32,7 +32,7 @@ class FirstPage extends StatelessWidget {
                   builder: (context) => AlertDialog(
                     title: const Text("Successful"),
                     content: const Text(
-                      "Gone back successfully",
+                      "Come back successfully",
                       textAlign: TextAlign.center,
                     ),
                     actions: [
