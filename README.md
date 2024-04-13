@@ -1,6 +1,6 @@
 # practice
 
-A project to practice the different types of widgets for beginner in flutter.
+A project to practice the different types of most commonly used widgets and the packages from pub.dev for beginner in flutter.
 
 ## Getting Started
 

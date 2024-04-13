@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class FetchingExample extends StatelessWidget {
-  const FetchingExample({super.key});
+class FutureBuilderExample extends StatelessWidget {
+  const FutureBuilderExample({super.key});
 
   Future<Map<String, dynamic>> fetchData() async {
     final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/todos/1'));
